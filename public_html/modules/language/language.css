@@ -1,0 +1,9 @@
+.widget-language .widget-content {
+	overflow: visible;
+}
+.widget-language  {
+	z-index: 2;
+}
+.widget-language.expanded {
+	z-index: 4;
+}

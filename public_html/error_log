@@ -1,0 +1,4 @@
+[03-Oct-2018 11:34:20 UTC] PHP Notice:  Undefined index: name in /home/kamrantr/public_html/send-mail.php on line 17
+[03-Oct-2018 11:34:20 UTC] PHP Notice:  Undefined index: email in /home/kamrantr/public_html/send-mail.php on line 19
+[03-Oct-2018 11:34:20 UTC] PHP Notice:  Undefined index: subject in /home/kamrantr/public_html/send-mail.php on line 21
+[03-Oct-2018 11:34:20 UTC] PHP Notice:  Undefined index: message in /home/kamrantr/public_html/send-mail.php on line 23
