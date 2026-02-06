@@ -1,0 +1,693 @@
+﻿body, html {
+    padding: 0;
+    margin: 0;
+    /* background-image: url(../img/background.svg); */
+    background-position: 0px -130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#DivResultHistoryDisplay{
+    font-size: 5px;
+}
+
+svg {
+    margin-top: -130px;
+    position: absolute;
+}
+
+button#rock {
+    background-color: red;
+    height: 10px;
+}
+
+
+span {
+   font-size: 12px;
+}
+
+.allMac {
+    display: block;
+    width: 360px;
+    height: 100%;
+    margin: 30px auto;
+    margin-top: -70px;
+    transform: scale(3);
+}
+
+    .allMac .macbook {
+        width: 600px;
+        margin: 0 auto;
+        max-height: 380px;
+    }
+
+.outerscreen {
+    height: 500px;
+    width: 2%;
+    margin-left: 300px;
+}
+
+.allMac .outerscreen {
+    border-radius: 10px;
+    border-top: 185px solid #000;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    height: 30px;
+    width: 285px;
+    position: absolute;
+    margin-left: 42.75px;
+    margin-top: 5px;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.allMac .screen {
+    height: 160px;
+    /* background-color: #0EA4D1; */
+    width: 260px;
+    position: absolute;
+    margin-left: 55.5px;
+    margin-top: 21px;
+    z-index: 5;
+}
+
+    .allMac .screen .browser {
+        position: relative;
+        top: 5%;
+        width: 95%;
+        height: 80%;
+        margin: auto;
+        transition: all .1s linear;
+    }
+        /* .allMac .screen .browser:hover {
+  transform: scale(0.95) translateY(0px);
+} */
+
+        .allMac .screen .browser .toolbar {
+            position: relative;
+            width: 100%;
+            height: 11px;
+            background: #eee;
+            border-radius: 1px 1px 0 0;
+            z-index: 999999;
+        }
+
+            .allMac .screen .browser .toolbar .buttons {
+                position: relative;
+                width: 10%;
+                height: 100%;
+                left: 2%;
+         
+            }
+
+                .allMac .screen .browser .toolbar .buttons .btn:nth-child(2) {
+                    float: left;
+                    width: 3px;
+                    height: 3px;
+                    border-radius: 50%;
+                    background: #FFBD35;
+                    margin: 4px 2px;
+                }
+
+                .allMac .screen .browser .toolbar .buttons .btn:nth-child(3) {
+                    float: left;
+                    width: 3px;
+                    height: 3px;
+                    border-radius: 50%;
+                    background: #00CD4A;
+                    margin: 4px 2px;
+                }
+
+            .allMac .screen .browser .toolbar .urlbar {
+                position: relative;
+                float: left;
+                padding-left: 3px;
+                width: 85%;
+                height: 5px;
+                left: 12%;
+                top: -8px;
+                background: white;
+            }
+
+                .allMac .screen .browser .toolbar .urlbar span {
+                    display: inline;
+                    float: left;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 4px;
+                }
+
+        .allMac .screen .browser .window {
+            position: relative;
+            width: 100%;
+            top: -12px;
+            height: calc(100% - 10px);
+            background: rgba(255, 255, 255, 0.14);
+            text-align: cente;
+        }
+
+            .allMac .screen .browser .window .heading {
+                width: 50%;
+                position: relative;
+                margin: 0px auto;
+                top: 10px;
+                z-index: 10000;
+                text-align: center;
+            }
+
+                .allMac .screen .browser .window .heading h2 {
+                    font-family: 'Open Sans', sans-serif;
+                    color: #333;
+                    font-size: 15px;
+                }
+
+                    .allMac .screen .browser .window .heading h2 small {
+                        font-size: 6px;
+                    }
+
+                        .allMac .screen .browser .window .heading h2 small:nth-child(2) {
+                            font-size: 7px;
+                        }
+
+    .allMac .screen .dock {
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        width: 90%;
+        height: 15px;
+        background: rgba(0, 0, 0, 0.15);
+        border-radius: 2px 2px 0 0;
+        transition: all .15s ease-in;
+    }
+
+        .allMac .screen .dock:hover {
+            /* width: 95%;
+  left: 2.5%; */
+        }
+
+        .allMac .screen .dock .dock-items {
+            margin-top: -25px;
+            position: relative;
+            width: 300%;
+            margin-left: 12.5%;
+            left: 0;
+            transition: all .1s linear;
+        }
+
+            .allMac .screen .dock .dock-items:hover {
+                /* left: -5px; */
+                /* transform: scale(0.95);
+   */
+            }
+
+            .allMac .screen .dock .dock-items .dock-item {
+                position: relative;
+                display: block;
+                float: left;
+                width: 8.5%;
+                height: 100%;
+                margin: 0 auto;
+                text-align: center;
+                transition: all .1s linear;
+                cursor: pointer;
+            }
+
+                .allMac .screen .dock .dock-items .dock-item span {
+                    display: block;
+                    position: absolute;
+                    top: -15px;
+                    width: 100%;
+                    font-size: 4px;
+                    font-family: 'Open Sans', sans-serif;
+                    padding: 1px;
+                    background: rgba(204, 204, 204, 0.6);
+                    visibility: hidden;
+                    text-transform: capitalize;
+                    text-align: center;
+                    border-radius: 1px;
+                }
+
+                .allMac .screen .dock .dock-items .dock-item img {
+                    width: 60%;
+                }
+
+                .allMac .screen .dock .dock-items .dock-item:nth-child(1) {
+                    left: 0px;
+                }
+
+                    .allMac .screen .dock .dock-items .dock-item:nth-child(1):hover {
+                        transform: scale(1.2) translateY(-3px);
+                        margin: 0 5px;
+                    }
+
+                        .allMac .screen .dock .dock-items .dock-item:nth-child(1):hover span {
+                            visibility: visible;
+                        }
+
+                .allMac .screen .dock .dock-items .dock-item:nth-child(2) {
+                    left: -3px;
+                }
+
+                    .allMac .screen .dock .dock-items .dock-item:nth-child(2):hover {
+                        transform: scale(1.2) translateY(-3px);
+                        margin: 0 5px;
+                    }
+
+                        .allMac .screen .dock .dock-items .dock-item:nth-child(2):hover span {
+                            visibility: visible;
+                        }
+
+                .allMac .screen .dock .dock-items .dock-item:nth-child(3) {
+                    left: -6px;
+                }
+
+                    .allMac .screen .dock .dock-items .dock-item:nth-child(3):hover {
+                        transform: scale(1.2) translateY(-3px);
+                        margin: 0 5px;
+                    }
+
+                        .allMac .screen .dock .dock-items .dock-item:nth-child(3):hover span {
+                            visibility: visible;
+                        }
+
+                .allMac .screen .dock .dock-items .dock-item:nth-child(4) {
+                    left: -9px;
+                }
+
+                    .allMac .screen .dock .dock-items .dock-item:nth-child(4):hover {
+                        transform: scale(1.2) translateY(-3px);
+                        margin: 0 5px;
+                    }
+
+                        .allMac .screen .dock .dock-items .dock-item:nth-child(4):hover span {
+                            visibility: visible;
+                        }
+
+                .allMac .screen .dock .dock-items .dock-item:nth-child(5) {
+                    left: -12px;
+                }
+
+                    .allMac .screen .dock .dock-items .dock-item:nth-child(5):hover {
+                        transform: scale(1.2) translateY(-3px);
+                        margin: 0 5px;
+                    }
+
+                        .allMac .screen .dock .dock-items .dock-item:nth-child(5):hover span {
+                            visibility: visible;
+                        }
+
+                .allMac .screen .dock .dock-items .dock-item:nth-child(6) {
+                    left: -15px;
+                }
+
+                    .allMac .screen .dock .dock-items .dock-item:nth-child(6):hover {
+                        transform: scale(1.2) translateY(-3px);
+                        margin: 0 5px;
+                    }
+
+                        .allMac .screen .dock .dock-items .dock-item:nth-child(6):hover span {
+                            visibility: visible;
+                        }
+
+                .allMac .screen .dock .dock-items .dock-item:nth-child(7) {
+                    left: -18px;
+                }
+
+                    .allMac .screen .dock .dock-items .dock-item:nth-child(7):hover {
+                        transform: scale(1.2) translateY(-3px);
+                        margin: 0 5px;
+                    }
+
+                        .allMac .screen .dock .dock-items .dock-item:nth-child(7):hover span {
+                            visibility: visible;
+                        }
+
+                .allMac .screen .dock .dock-items .dock-item:nth-child(8) {
+                    left: -21px;
+                }
+
+                    .allMac .screen .dock .dock-items .dock-item:nth-child(8):hover {
+                        transform: scale(1.2) translateY(-3px);
+                        margin: 0 5px;
+                    }
+
+                        .allMac .screen .dock .dock-items .dock-item:nth-child(8):hover span {
+                            visibility: visible;
+                        }
+
+                .allMac .screen .dock .dock-items .dock-item:nth-child(9) {
+                    left: -24px;
+                }
+
+                    .allMac .screen .dock .dock-items .dock-item:nth-child(9):hover {
+                        transform: scale(1.2) translateY(-3px);
+                        margin: 0 5px;
+                    }
+
+                        .allMac .screen .dock .dock-items .dock-item:nth-child(9):hover span {
+                            visibility: visible;
+                        }
+
+                .allMac .screen .dock .dock-items .dock-item:nth-child(10) {
+                    left: -27px;
+                }
+
+                    .allMac .screen .dock .dock-items .dock-item:nth-child(10):hover {
+                        transform: scale(1.2) translateY(-3px);
+                        margin: 0 5px;
+                    }
+
+                        .allMac .screen .dock .dock-items .dock-item:nth-child(10):hover span {
+                            visibility: visible;
+                        }
+
+
+
+aside {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px;
+    background-color: rgba(0, 0, 0, 0.23);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: fixed;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    top: 0;
+}
+
+    aside .legend {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 200px;
+        background-color: #fff;
+        height: 50px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+        aside .legend .me, aside .legend .cpu {
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            width: 50%;
+            float: left;
+            text-align: center;
+            padding: 0.3rem 0;
+        }
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    /* position: absolute; */
+}
+
+aside .history-item {
+    height: 40px;
+    color: white;
+    font-size: 24px;
+    line-height: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+    aside .history-item.win {
+        background-color: rgba(12, 145, 78, 0.74);
+    }
+
+    aside .history-item.loss {
+        background-color: rgba(197, 53, 53, 0.77);
+    }
+
+    aside .history-item.tie {
+        background-color: rgba(0, 70, 150, 0.38);
+    }
+
+    aside .history-item .fa {
+        text-align: center;
+        width: 50%;
+    }
+
+aside .scoreboard {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 200px;
+    background-color: #fff;
+    height: 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+    aside .scoreboard .win, aside .scoreboard .loss, aside .scoreboard .tie, aside .scoreboard .move {
+        height: 40px;
+        line-height: 20px;
+        width: 25%;
+        float: left;
+        text-align: center;
+        padding: 0.3rem 0;
+    }
+
+#b {
+    margin-left: 200px;
+    position: absolute;
+}
+
+
+#side {
+    display: none;
+}
+
+
+
+.usercontainer img {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+div.usercontainer {
+    background-image: url(../images/Cinemagraph-2.gif);
+    opacity: 0.9;
+    background-size: 50%;
+    margin-top: -10px;
+}
+
+
+/*Divs around entire game*/
+
+.computeranswer {
+    margin-left: 60px;
+}
+
+#playerResult {
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: black;
+    position: absolute;
+    margin-top: -29px;
+    margin-left: 62px;
+}
+
+#computerResult {
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 15px;
+    letter-spacing: 2px;
+    position: absolute;
+    margin-top: -30px;
+}
+
+.computeranswer {
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 50%;
+    margin-left: 313px;
+}
+
+
+/*Scoreboard*/
+
+table {
+
+    margin: auto;
+    width: 30%;
+}
+
+th {
+    border-bottom: 2px solid black;
+}
+
+td {
+    color: black;
+    /* font-size: 2px; */
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+table.round {
+    width: 20%;
+}
+#resultDisplay{
+    font-size: 10px;
+    text-align: center;
+    color: white;
+}
+
+#me div {
+    color: white;
+}
+
+#cpu div{
+    color: white;
+}
+
+.header2{
+    color: black!important;
+}
+
+#showUserImage{
+    height: 150%;
+    width: 150%;
+    margin-left: -20px;
+}
+
+#showComputerImage{
+    height: 150%;
+    width: 150%;
+    margin-left: -30px;
+}
+#showComputerRPS{
+    margin: 0 auto;
+    height: 80%;
+    width: 80%;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    margin-top: -20px;
+    width: 33.33%;
+    /* padding: 10px; */
+    height: 95px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+  }
+  .row {
+    position: relative;
+    height: 50px;
+    z-index: 1;
+    clear: both;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .row--intro {
+    padding-top: 20px;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.4;
+  }
+  .row--intro span {
+    font-size: 11px;
+  }
+  .skew-title {
+    font-size: 25px;
+    margin-left: 80px;
+  }
+  .skew-title span {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 50px;
+    margin: auto;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    font-family: 'roboto condensed';
+    font-weight: 700;
+    font-size: 35.714285714285715px;
+    line-height: 50px;
+    -webkit-transform: skewY(-15deg);
+            transform: skewY(-15deg);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: default;
+  }
+  .skew-title span:after,
+  .skew-title span:before {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    background: #E2AD45;
+    content: ' ';
+    z-index: -1;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .skew-title span:before {
+    background: rgba(0,0,0,0.1);
+    -webkit-transform: skewY(15deg);
+            transform: skewY(15deg);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  .skew-title span:nth-child(even) {
+    background-color: #144c6e;
+    -webkit-transform: skewY(15deg);
+            transform: skewY(15deg);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    color: #d9d9d9;
+  }
+  .skew-title span:nth-child(even):after {
+    background-color: #144c6e;
+  }
+  .skew-title span:nth-child(even):before {
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+    -webkit-transform: skewY(-15deg);
+            transform: skewY(-15deg);
+  }
+  .skew-title span.flat {
+    -webkit-transform: skewY(0);
+            transform: skewY(0);
+    color: #fff;
+  }
+  .skew-title span.flat:before {
+    -webkit-transform: skewY(0);
+            transform: skewY(0);
+  }
+  .skew-title span.flat:nth-child(even):after {
+    background-color: #185a81;
+  }
+  .skew-title span.alt:after {
+    background-color: #E2AD45;
+  }
+  .skew-title span.alt:nth-child(even):after {
+    background-color: #144C6E;
+  }
+  .skew-title span.alt.flat:nth-child(even):after {
+    background-color: #b94a2c;
+  }
+  

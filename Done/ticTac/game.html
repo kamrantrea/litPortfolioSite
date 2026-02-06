@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="no-js" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>
+        Game
+    </title>
+
+
+
+    <link href="assets/css/foundation.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <header class="main-header">
+                <div class="container">
+                    <div class="title">
+                        <!-- TITLE IN SPAN -->
+                        <span>
+    ROCK PAPER SCISSORS
+   </span>
+                    </div>
+                    <!-- RESET BUTTON -->
+                    <a class="button" id="reset" onclick="resetGame()">Reset</button></a>
+                    <!-- SECONDARY TITLE -->
+                    <h1>HUMAN VS COMPUTER</h1>
+                </div>
+                <div class="gamecontainer">
+                    <div class="row">
+                        <!-- FOUNDATION TO ORGANIZE IN ROW LEFT -->
+                        <div class="small-12 medium-6 large-3 columns">
+                            <!-- PLAYER SCORE LEFT SIDE OF PAGE -->
+                            <div class="human">
+                                <p id="playerResult"></p>
+                                <table>
+                                    <td>Player</td>
+                                    <tr>
+                                        <td id="userScore">0</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- FOUNDATION TO ORGANIZE IN ROW MIDDLE -->
+                        <div class="small-12 medium-6 large-5 columns">
+                            <table class="round">
+                                <p>ROUND</p>
+                                <div id="round">0
+                                </div>
+                            </table>
+                        </div>
+                        <!-- FOUNDATION TO ORGANIZE IN ROW RIGHT-->
+                        <div class="small-12 medium-6 large-3 columns">
+                            <!-- COMPUTER SCORE RIGHT SIDE OF PAGE -->
+                            <div class="computer">
+                                <p id="computerResult"></p>
+                                <table>
+                                    <td>Computer</td>
+                                    <tr>
+                                        <td id="computerScore">0</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+            </header>
+        </header>
+        </div>
+        </div>
+    </div>
+
+
+    <article>
+        <div class="usercontainer">
+            <div class="row">
+                <!-- FOUNDATION TO ORGANIZE IN ROW -->
+                <div class="small-12 medium-6 large-4 columns">
+                    <!-- MOVING SVG AROUND ROCK BUTTON -->
+                    <svg version="1.1" id="L3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+   <circle fill="none" stroke="#000" stroke-width="4" cx="50" cy="50" r="44" style="opacity:1;"/>
+   <circle fill="#000" stroke="#e74c3c" stroke-width="3" cx="8" cy="54" r="6" >
+    <animateTransform
+      attributeName="transform"
+      dur="2s"
+      type="rotate"
+      from="0 50 48"
+      to="360 50 52"
+      repeatCount="indefinite" />
+    
+    </circle>
+    <!-- Rock Button Image -->
+    <div id="rock">
+    <a id="rock-hover-sound" href="#"><img src="assets/images/rock.png" alt="Rock" </a>
+    <!-- Audio Linked to Javascript to play on hover over rock button -->
+    <audio id="sound-one" style="display:none;" controls="controls" preload="auto">
+    <source src="assets/audio/scissors.wav"></source>
+    </audio>
+    </div>
+    </div>
+    <!-- FOUNDATION TO ORGANIZE IN ROW -->
+    <div class="small-12 medium-6 large-3 columns">
+    <!-- Paper Button Image -->
+    <div id="paper">
+    <a href="#"><img src="assets/images/paper.png" alt="Paper" </a>
+
+     </div>
+     </div>
+
+     <!-- FOUNDATION TO ORGANIZE IN ROW -->
+    <div class="small-12 medium-6 large-4 columns">
+    <!-- MOVING SVG AROUND SCISSORS BUTTON -->
+    <svg version="1.1" id="L3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+    <circle fill="none" stroke="#000" stroke-width="4" cx="50" cy="50" r="44" style="opacity:1;"/>
+    <circle fill="#000" stroke="#e74c3c" stroke-width="3" cx="8" cy="54" r="6" >
+    <animateTransform
+      attributeName="transform"
+      dur="2s"
+      type="rotate"
+      from="0 50 48"
+      to="-360 50 52"
+      repeatCount="indefinite" />
+    </circle>  
+    <!-- Scissors Button Image -->
+    <div id="scissors">
+    <a href="#">
+    <img src="assets/images/scissors.png" alt="Scissors" </a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </article>
+    <br>
+<!-- Results Of the Game -->
+    <div class="computeranswer">
+        RESULTS:
+        <p id="winner" </p>
+    </div>
+<!-- End Results of the Game -->
+<!-- Footer -->
+<footer>
+KAM TRÉA
+</footer>
+<!-- Page Audio -->
+<audio id="player" volume= "0.1" autoplay loop> 
+<source src="assets/audio/background.mp3" type="audio/mpeg"></audio>
+<!--	external javascript	  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
